@@ -6,6 +6,11 @@ generaButton.addEventListener("click", function () {
   const kmToGo = document.getElementById("km").value;
   const age = document.getElementById("eta").value;
 
+  if (nameSurname === "" || kmToGo === "") {
+    alert("Compila correttamente i campi Nome Cognome e Km da percorrere!");
+    throw new Error("Campi da compilare");
+  }
+
   let ticketCost = 0.27 * kmToGo;
   let message = "";
   let ticketType = "Biglietto standard";
