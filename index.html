@@ -54,12 +54,14 @@
               >
                 <option value="maggiorenne">Maggiorenne</option>
                 <option value="minorenne">Minorenne</option>
+                <option value="over">Oltre i 65</option>
               </select>
             </div>
           </div>
           <!-- Buttons -->
           <div class="flex gap-3">
             <button
+              id="genera"
               class="border-2 border-red-800 rounded py-1 px-2 bg-neutral-200"
             >
               Genera
@@ -74,7 +76,7 @@
       </div>
 
       <!-- Second Section -->
-      <div class="invisible">
+      <div id="second-section" class="hidden">
         <h1 class="text-white text-center uppercase font-semibold text-xl mb-3">
           Il tuo biglietto
         </h1>
@@ -87,7 +89,7 @@
           <div class="flex border-2 border-netrual-400">
             <div class="w-1/4 bg-slate-500 p-5">
               <h3 class="uppercase font-semibold text-lg">Nome passeggero</h3>
-              <p class="text-white">Jon Snow</p>
+              <p id="nome-passeggero" class="text-white"></p>
             </div>
             <div class="w-3/4 flex">
               <div class="p-5 flex flex-col justify-between">
@@ -104,7 +106,8 @@
               </div>
               <div class="p-5 flex flex-col justify-between">
                 <p class="font-semibold">Costo Biglietto</p>
-                <p><span>2.10</span> €</p>
+                <small id="messaggio"></small>
+                <p><span id="costo-biglietto"></span> €</p>
               </div>
             </div>
           </div>
