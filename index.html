@@ -11,64 +11,105 @@
   </head>
   <body>
     <main
-      class="h-screen bg-red-800 text-center py-5 flex flex-col items-center justify-center"
+      class="h-screen bg-red-800 py-5 flex flex-col items-center justify-center"
     >
-      <!-- Title -->
-      <h1 class="text-white uppercase font-semibold text-xl mb-3">
-        Calcola il prezzo del tuo biglietto
-      </h1>
       <!-- First Section -->
-      <section
-        class="bg-white rounded py-5 px-5 md:px-10 flex flex-col items-center gap-8"
-      >
-        <!-- Input -->
-        <div class="flex gap-3 md:gap-10">
-          <div>
-            <h2 class="text-red-800 font-semibold mb-2">Nome Cognome</h2>
-            <input
-              class="border-2 border-red-800 rounded text-center"
-              type="text"
-              name=""
-              id="nome-cognome"
-              placeholder="Nome Cognome"
-            />
+      <div class="mb-9 text-center">
+        <!-- Title -->
+        <h1 class="text-white uppercase font-semibold text-xl mb-3">
+          Calcola il prezzo del tuo biglietto
+        </h1>
+        <!-- First Section -->
+        <section
+          class="bg-white rounded py-5 px-5 md:px-10 flex flex-col items-center gap-8"
+        >
+          <!-- Input -->
+          <div class="flex gap-3 md:gap-10">
+            <div>
+              <h2 class="text-red-800 font-semibold mb-2">Nome Cognome</h2>
+              <input
+                class="border-2 border-red-800 rounded text-center"
+                type="text"
+                name=""
+                id="nome-cognome"
+                placeholder="Nome Cognome"
+              />
+            </div>
+            <div>
+              <h2 class="text-red-800 font-semibold mb-2">Km da percorrere</h2>
+              <input
+                class="border-2 border-red-800 rounded text-center"
+                type="number"
+                name=""
+                id="km"
+                placeholder="Km da percorrere"
+              />
+            </div>
+            <div>
+              <h2 class="text-red-800 font-semibold mb-2">Fascia d'età</h2>
+              <select
+                class="border-2 border-red-800 rounded text-center bg-white"
+                name=""
+                id="eta"
+              >
+                <option value="maggiorenne">Maggiorenne</option>
+                <option value="minorenne">Minorenne</option>
+              </select>
+            </div>
           </div>
-          <div>
-            <h2 class="text-red-800 font-semibold mb-2">Km da percorrere</h2>
-            <input
-              class="border-2 border-red-800 rounded text-center"
-              type="number"
-              name=""
-              id="km"
-              placeholder="Km da percorrere"
-            />
-          </div>
-          <div>
-            <h2 class="text-red-800 font-semibold mb-2">Fascia d'età</h2>
-            <select
-              class="border-2 border-red-800 rounded text-center bg-white"
-              name=""
-              id="eta"
+          <!-- Buttons -->
+          <div class="flex gap-3">
+            <button
+              class="border-2 border-red-800 rounded py-1 px-2 bg-neutral-200"
             >
-              <option value="maggiorenne">Maggiorenne</option>
-              <option value="minorenne">Minorenne</option>
-            </select>
+              Genera
+            </button>
+            <button
+              class="border-2 border-red-800 rounded py-1 px-2 bg-neutral-200"
+            >
+              Annulla
+            </button>
           </div>
-        </div>
-        <!-- Buttons -->
-        <div class="flex gap-3">
-          <button
-            class="border-2 border-red-800 rounded py-1 px-2 bg-neutral-200"
-          >
-            Genera
-          </button>
-          <button
-            class="border-2 border-red-800 rounded py-1 px-2 bg-neutral-200"
-          >
-            Annulla
-          </button>
-        </div>
-      </section>
+        </section>
+      </div>
+
+      <!-- Second Section -->
+      <div class="invisible">
+        <h1 class="text-white text-center uppercase font-semibold text-xl mb-3">
+          Il tuo biglietto
+        </h1>
+        <section
+          class="bg-white rounded py-5 px-5 md:px-10 flex flex-col items-center"
+        >
+          <h2 class="uppercase font-semibold mb-1 self-start">
+            Dettaglio passeggeri
+          </h2>
+          <div class="flex border-2 border-netrual-400">
+            <div class="w-1/4 bg-slate-500 p-5">
+              <h3 class="uppercase font-semibold text-lg">Nome passeggero</h3>
+              <p class="text-white">Jon Snow</p>
+            </div>
+            <div class="w-3/4 flex">
+              <div class="p-5 flex flex-col justify-between">
+                <p class="font-semibold">Offerta</p>
+                <p>Biglietto standard</p>
+              </div>
+              <div class="p-5 flex flex-col justify-between">
+                <p class="font-semibold">Carrozza</p>
+                <p>5</p>
+              </div>
+              <div class="p-5 flex flex-col justify-between">
+                <p class="font-semibold">Codice CP</p>
+                <p>92911</p>
+              </div>
+              <div class="p-5 flex flex-col justify-between">
+                <p class="font-semibold">Costo Biglietto</p>
+                <p><span>2.10</span> €</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
     <script src="js/script.js"></script>
   </body>
