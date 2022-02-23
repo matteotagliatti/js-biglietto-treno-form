@@ -18,9 +18,17 @@ generaButton.addEventListener("click", function () {
 
   ticketCost = ticketCost.toFixed(2);
 
+  /* Random carriage */
+  const carriage = Math.floor(Math.random() * 9 + 1);
+
+  /* Random CP Code */
+  const cpCode = Math.floor(Math.random() * 999 + 1);
+
   document.getElementById("nome-passeggero").innerText = nameSurname;
   document.getElementById("costo-biglietto").innerText = ticketCost;
   document.getElementById("messaggio").innerText = message;
+  document.getElementById("carrozza").innerText = carriage;
+  document.getElementById("codice-cp").innerText = "99" + cpCode;
 
   document.getElementById("second-section").classList.remove("hidden");
   document.getElementById("second-section").classList.add("visible");
