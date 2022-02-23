@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Biglietto Treno Form</title>
+
+    <!-- TailwindCSS script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <main
+      class="h-screen bg-red-800 text-center py-5 flex flex-col items-center justify-center"
+    >
+      <!-- Title -->
+      <h1 class="text-white uppercase font-semibold text-xl mb-3">
+        Calcola il prezzo del tuo biglietto
+      </h1>
+      <!-- First Section -->
+      <section
+        class="bg-white rounded py-5 px-5 md:px-10 flex flex-col items-center gap-8"
+      >
+        <!-- Input -->
+        <div class="flex gap-3 md:gap-10">
+          <div>
+            <h2 class="text-red-800 font-semibold mb-2">Nome Cognome</h2>
+            <input
+              class="border-2 border-red-800 rounded text-center"
+              type="text"
+              name=""
+              id="nome-cognome"
+              placeholder="Nome Cognome"
+            />
+          </div>
+          <div>
+            <h2 class="text-red-800 font-semibold mb-2">Km da percorrere</h2>
+            <input
+              class="border-2 border-red-800 rounded text-center"
+              type="number"
+              name=""
+              id="km"
+              placeholder="Km da percorrere"
+            />
+          </div>
+          <div>
+            <h2 class="text-red-800 font-semibold mb-2">Fascia d'età</h2>
+            <select
+              class="border-2 border-red-800 rounded text-center bg-white"
+              name=""
+              id="eta"
+            >
+              <option value="maggiorenne">Maggiorenne</option>
+              <option value="minorenne">Minorenne</option>
+            </select>
+          </div>
+        </div>
+        <!-- Buttons -->
+        <div class="flex gap-3">
+          <button
+            class="border-2 border-red-800 rounded py-1 px-2 bg-neutral-200"
+          >
+            Genera
+          </button>
+          <button
+            class="border-2 border-red-800 rounded py-1 px-2 bg-neutral-200"
+          >
+            Annulla
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="js/script.js"></script>
+  </body>
+</html>
