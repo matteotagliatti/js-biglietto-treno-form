@@ -1,5 +1,6 @@
 const generaButton = document.getElementById("genera");
 const annullaButton = document.getElementById("annulla");
+const secondSection = document.getElementById("second-section");
 
 generaButton.addEventListener("click", function () {
   const nameSurname = document.getElementById("nome-cognome").value;
@@ -40,14 +41,14 @@ generaButton.addEventListener("click", function () {
   document.getElementById("codice-cp").innerText = "99" + cpCode;
   document.getElementById("biglietto").innerText = ticketType;
 
-  document.getElementById("second-section").classList.remove("hidden");
-  document.getElementById("second-section").classList.add("visible");
+  secondSection.classList.remove("hidden");
+  secondSection.classList.add("visible");
 });
 
 annullaButton.addEventListener("click", function () {
   document.getElementById("nome-cognome").value = "";
   document.getElementById("km").value = "";
 
-  document.getElementById("second-section").classList.remove("visible");
-  document.getElementById("second-section").classList.add("hidden");
+  secondSection.classList.remove("visible");
+  secondSection.classList.add("hidden");
 });
