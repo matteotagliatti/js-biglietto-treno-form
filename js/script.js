@@ -26,8 +26,6 @@ generaButton.addEventListener("click", function () {
     ticketType = "Biglietto scontato";
   }
 
-  ticketCost = ticketCost.toFixed(2);
-
   /* Random carriage */
   const carriage = Math.floor(Math.random() * 9 + 1);
 
@@ -39,7 +37,7 @@ generaButton.addEventListener("click", function () {
   document.getElementById("messaggio").innerText = message;
   document.getElementById("carrozza").innerText = carriage;
   document.getElementById("codice-cp").innerText = "99" + cpCode;
-  document.getElementById("biglietto").innerText = ticketType;
+  document.getElementById("biglietto").innerText = ticketType.toFixed(2);
 
   secondSection.classList.remove("hidden");
   secondSection.classList.add("visible");
