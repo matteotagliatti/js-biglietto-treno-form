@@ -1,18 +1,18 @@
 const generaButton = document.getElementById("genera");
 const annullaButton = document.getElementById("annulla");
 const secondSection = document.getElementById("second-section");
+const nameSurname = document.getElementById("nome-cognome");
+const kmToGo = document.getElementById("km");
 
 generaButton.addEventListener("click", function () {
-  const nameSurname = document.getElementById("nome-cognome").value;
-  const kmToGo = document.getElementById("km").value;
   const age = document.getElementById("eta").value;
 
-  if (nameSurname === "" || kmToGo === "") {
+  if (nameSurname.value === "" || kmToGo.value === "") {
     alert("Compila correttamente i campi Nome Cognome e Km da percorrere!");
     throw new Error("Campi da compilare");
   }
 
-  let ticketCost = 0.27 * kmToGo;
+  let ticketCost = 0.27 * kmToGo.value;
   let message = "";
   let ticketType = "Biglietto standard";
 
@@ -34,7 +34,7 @@ generaButton.addEventListener("click", function () {
   /* Random CP Code */
   const cpCode = Math.floor(Math.random() * 999 + 1);
 
-  document.getElementById("nome-passeggero").innerText = nameSurname;
+  document.getElementById("nome-passeggero").innerText = nameSurname.value;
   document.getElementById("costo-biglietto").innerText = ticketCost;
   document.getElementById("messaggio").innerText = message;
   document.getElementById("carrozza").innerText = carriage;
@@ -46,8 +46,8 @@ generaButton.addEventListener("click", function () {
 });
 
 annullaButton.addEventListener("click", function () {
-  document.getElementById("nome-cognome").value = "";
-  document.getElementById("km").value = "";
+  nameSurname.value = "";
+  kmToGo.value = "";
 
   secondSection.classList.remove("visible");
   secondSection.classList.add("hidden");
