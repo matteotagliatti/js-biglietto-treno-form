@@ -6,6 +6,7 @@ const kmToGo = document.getElementById("km");
 const age = document.getElementById("eta");
 
 generaButton.addEventListener("click", function () {
+  /* Check if input are compilated right */
   if (
     nameSurname.value === "" ||
     kmToGo.value === "" ||
@@ -35,6 +36,7 @@ generaButton.addEventListener("click", function () {
   /* Random CP Code */
   const cpCode = Math.floor(Math.random() * 999 + 1);
 
+  /* Create Ticjet */
   document.getElementById("nome-passeggero").innerText = nameSurname.value;
   document.getElementById("costo-biglietto").innerText = ticketCost.toFixed(2);
   document.getElementById("messaggio").innerText = message;
